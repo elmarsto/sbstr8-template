@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-rgb: 255, 255, 255;
+  --border-radius: 12px;
+  --font-bold-italic: serif;
+  --font-bold: serif;
+  --font-header-bold-italic: sans-serif;
+  --font-header-bold: sans-serif;
+  --font-header-italic: sans-serif;
+  --font-header: sans-serif;
+  --font-italic: serif;
+  --font-mono-bold: monospace;
+  --font-mono-bold_italic: monospace;
+  --font-mono-italic: monospace;
+  --font-mono: monospace;
+  --font-mono_header-bold: monospace;
+  --font-mono_header: monospace;
+  --font: serif;
+  --foreground-rgb: 0, 0, 0;
+  --max-width: 1100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
+  }
+  html {
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
+  font-family: var(--font);
+}
+
+em, i {
+  font-family: var(--font-italic);
+}
+
+strong, b {
+  font-family: var(--font-bold);
+}
+
+em strong, em b, i strong, i b,
+strong em, strong i, b em, b i {
+  font-family: var(--font-bold-italic);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
+
+h1 strong, h1 b, h2 strong, h2 b, h3 strong, h3 b, h4 strong, h4 b, h5 strong, h5 b, h6 strong, h6 b {
+  font-family: var(--font-header-bold);
+}
+
+main {
+  padding: 24px;
+}
