@@ -1,0 +1,38 @@
+{
+  "name": "sbstr8-tmpl8",
+  "version": "0.0.4",
+  "description": "Template for sbstr8 basis",
+  "scripts": {
+    "build": "npx tsc; chmod +x ./dist/cli.js",
+    "dev": "npx tsc --watch",
+    "type-check": "npx tsc --noEmit",
+    "lint": "npx eslint --ignore-path .gitignore \"src/**/*.+(ts|js)\"",
+    "format": "npx prettier --ignore-path .gitignore \"src/**/*.+(ts|js)\" --write",
+    "postinstall": "npx husky install",
+    "test": "jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmarsto/sbstr8-tmpl8.git"
+  },
+  "keywords": [
+    "sbstr8",
+    "tmpl8",
+    "template"
+  ],
+  "author": "@elmarsto",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/elmarsto/sbstr8-tmpl8/issues"
+  },
+  "homepage": "https://github.com/elmarsto/sbstr8-tmpl8#readme",
+  "lint-staged": {
+    "./src/**/*.{ts,js}": [
+      "eslint --ignore-path .gitignore --fix",
+      "prettier --ignore-path .gitignore --write"
+    ]
+  },
+  "devDependencies": {
+    "sbstr8-cli": "^0.0.4"
+  }
+}
