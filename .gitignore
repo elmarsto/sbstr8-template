@@ -1,3 +1,7 @@
+# the unionfs mount
+
+/site/
+
 # Logs
 logs
 *.log
